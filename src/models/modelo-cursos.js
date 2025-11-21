@@ -5,6 +5,7 @@ export const cursos = [{
         descripcion: "Aprende las bases del desarrollo web con HTML y crea tus primeras páginas.",
         video: "https://www.youtube.com/embed/lZeH53-EdjA?si=YFTTH6Y_WvwRsG36",
         pagina: "./src/pages/cursos/introduccion-html.html"
+
     },
     {
         id: 2,

@@ -1,11 +1,13 @@
-import { cursos } from "../models/modelo-cursos.js";
+// src/helpers/helpers.js
 
 export function renderizarCatalogo(contenedor, categoria = "Todos") {
+
+    // Leer cursos desde localStorage (fuente oficial)
+    let cursos = JSON.parse(localStorage.getItem("cursos")) || [];
 
     contenedor.innerHTML = "";
 
     for (let i = 0; i < cursos.length; i++) {
-
 
         if (categoria !== "Todos" && cursos[i].categoria !== categoria) {
             continue;

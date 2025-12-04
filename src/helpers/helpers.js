@@ -1,3 +1,21 @@
+// leer los cursos desde el local 
+export function cargarCursosLocalStorage() {
+    return JSON.parse(localStorage.getItem("cursos")) || [];
+}
+
+// cuenta por categoria
+export function contarCursosPorCategoria() {
+    const cursos = cargarCursosLocalStorage();
+    const contadores = {};
+
+    cursos.forEach(curso => {
+        const cat = curso.categoria || "Sin categoría";
+        contadores[cat] = (contadores[cat] || 0) + 1;
+    });
+
+    return contadores;
+}
+
 // Funcio de renderizar catalogo hay que modificar
 export function renderizarCatalogo(contenedor, categoria = "Todos") {
 

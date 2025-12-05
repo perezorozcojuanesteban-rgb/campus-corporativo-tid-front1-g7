@@ -9,6 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./src/assets/css/style.css" />
 </head>
+ <script type="module">
+
+        import "./src/controllers/main.js"; import { activarBusqueda } from "./src/controllers/busqueda.js"; import { renderizarCatalogo } from "./src/helpers/helpers.js"; import { mostrarContadores } from "./src/controllers/contador-categorias.js"; activarBusqueda?.();
+        const contenedor = document.querySelector(".contenedor-cursos"); renderizarCatalogo(contenedor); mostrarContadores();
+    </script>
 
 <body>
     <header>
@@ -46,9 +51,9 @@
                 <div class="collapse navbar-collapse" id="mi-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="catalogo.html">Todos los Cursos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./src/pages/tecnologia.html">Tecnología</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./src/pages/gestion.html">Gestión</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./src/pages/innovacion.html">Innovación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./src/pages/tecnologia.html">Tecnología <span data-categoria="Tecnología"></span> </a></li>
+                        <li class="nav-item"><a class="nav-link" href="./src/pages/gestion.html">Gestión <span data-categoria="Gestión"></span> </a></li>
+                        <li class="nav-item"><a class="nav-link" href="./src/pages/innovacion.html">Innovación <span data-categoria="Innovación"></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -65,10 +70,6 @@
     <footer>
         <p>© 2025 Campus Corporativo TID – Grupo 3: Catálogo de Cursos</p>
     </footer>
-
-    <script type="module">
-        import "./src/controllers/main.js"; import { renderizarCatalogo } from "./src/helpers/helpers.js"; const contenedor = document.querySelector(".contenedor-cursos"); renderizarCatalogo(contenedor);
-    </script>
 
 
 

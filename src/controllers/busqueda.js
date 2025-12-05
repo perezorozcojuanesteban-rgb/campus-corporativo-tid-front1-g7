@@ -14,6 +14,7 @@ export function activarBusqueda() {
             curso.titulo.toLowerCase().includes(texto)
         );
 
+
         contenedor.innerHTML = "";
 
         filtrados.forEach(curso => {
